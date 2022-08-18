@@ -9,6 +9,9 @@ class Clientes(models.Model):
     email = models.EmailField(blank=True, null=True)
     telefono = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.nombre
+
 class Articulos(models.Model):
     nombre = models.CharField(max_length=30)
     seccion = models.CharField(max_length=20)
